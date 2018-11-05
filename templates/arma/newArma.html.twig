@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+
+    <form action="#">
+    	<label for="precio">Precio del arma</label>
+    	<input type="number" name="precio">
+		<br>
+		<br>
+    	<label for="material_frab">Tipo de arma</label>
+		<select id="material_frab">
+		  <option value="" disabled selected>De que tipo es el arma?</option>
+		  <option value="1">Espada</option>
+		  <option value="2">Lanza</option>
+		  <option value="3">Cestos</option>
+		</select>
+		<br>
+		<br>
+  		<label for="material_frab">Material de fabricación</label>
+		<select id="material_frab">
+		  <option value="" disabled selected>Escoje un matrial</option>
+		  <option value="1">Oro</option>
+		  <option value="2">Plata</option>
+		  <option value="3">Espiritual</option>
+		</select>
+    		
+  
+		<br>
+		<br>
+    	<span>A cuantas manos?</span>
+    	<br>
+    	<br>
+    	<label>
+        	<input name="group1" type="radio" checked />
+        	<span>1</span>
+      	</label>
+		<label>
+        	<input name="group1" type="radio"  />
+        	<span>2</span>
+      	</label>
+      	<br>
+      	<br>
+	   	<label for="danio">Daño del arma</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">Daño base del arma</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">Punto de armadura del arma</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">Momento de reacción del arma</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">FUE</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">Car del arma</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">Destresa del arma</label>
+    	<input type="number" name="danio">
+
+    	<span><h4 class="center">Alcances (opcional)</h4></span>
+    	<br>
+      	<br>
+	   	<label for="danio">ef del arma (alcance efectivo)</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">Alcance maximo del arma</label>
+    	<input type="number" name="danio">
+    	<br>
+      	<br>
+	   	<label for="danio">tf del arma</label>
+    	<input type="number" name="danio"> 
+    	<br>
+    	<span>
+    		<input type="submit" value="Crear Arma">
+    		<input type="button" value="Cancelar">   	 	
+    	</span>
+
+    </form>
+</div>
+{% endblock %}

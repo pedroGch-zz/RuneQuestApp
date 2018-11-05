@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('css/estiloArma.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+
+<!-- <div class="example-wrapper"> -->
+<a href="/nuevaArma">
+<div class="rectangulo gradianteAzul">
+
+<p class="center">Armas</p>
+</div>
+</a>
+
+<a href="#">
+<div class="rectangulo gradianteRojo">
+
+<p class="center">Personajes</p>
+</div>
+</a>
+
+<a href="#">
+<div class="rectangulo gradianteVerde">
+
+<p class="center">Items</p>
+</div>
+</a>
+
+<a href="#">
+<div class="rectangulo gradianteAmarillo">
+<img src="img/martillo.png" alt="martillo">
+<p class="center">Armas</p>
+</div>
+</a>
+{% endblock %}
