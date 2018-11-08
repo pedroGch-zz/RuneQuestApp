@@ -5,55 +5,343 @@
 {% block body %}
 
 <div class="example-wrapper">
-  <h1>Listado de armas</h1>
   <div class="container">
-    <table class="highlight">
+    <h1>Listado de armas</h1>
+    <table class="highlight" id="armaTabla">
           <thead>
             <tr>
                 <th>tipo</th>
                 <th>precio</th>
-                <th>material</th>               
-                <th>Vista rapida</th>
-                <th>Modificar</th>
-                <th>Eliminar</th>
+                <th>material</th>
+                <th class="center">Vista rapida</th>
+                <th class="center">Modificar</th>
+                <th class="center">Eliminar</th>
 
             </tr>
           </thead>
           <tbody>
-            <tr>            
+            <tr>
               <td>tipo</td>
               <td>precio</td>
               <td>material</td>
-              <td> vista previa</td>
-              <td>modificar</td>
-              <td>eliminar</td>
+              <td class="center">
+                <a href="#modal1" class=" btn-floating btn-flat blue modal-trigger" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
             </tr>
-            <tr>            
+            <tr>
               <td>tipo</td>
               <td>precio</td>
               <td>material</td>
-              <td><i class="mdi-action-bug-report circle red darken-2"></i></td>
-              <td>modificar</td>
-              <td>eliminar</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
             </tr>
-            <tr>            
+            <tr>
               <td>tipo</td>
               <td>precio</td>
               <td>material</td>
-              <td><i class="mdi-action-bug-report circle red darken-2"></i></td>
-              <td>modificar</td>
-              <td>eliminar</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
             </tr>
-            <tr>            
+            <tr>
               <td>tipo</td>
               <td>precio</td>
               <td>material</td>
-              <td><i class="mdi-action-bug-report circle red darken-2"></i></td>
-              <td>modificar</td>
-              <td>eliminar</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
+            </tr>
+            <tr>
+              <td>tipo</td>
+              <td>precio</td>
+              <td>material</td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat blue" title="Ver observaciones">
+			               <i class="material-icons">remove_red_eye</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat green" title="Ver observaciones">
+			               <i class="material-icons">mode_edit</i>
+		            </a>
+              </td>
+              <td class="center">
+                <a href="#" class=" btn-floating btn-flat red" title="Ver observaciones">
+			               <i class="material-icons">delete_forever</i>
+		            </a>
+              </td>
             </tr>
           </tbody>
       </table>
+      <div class="col-md-12 center text-center">
+            <span class="left" id="total_reg"></span>
+             <ul class="pagination pager" id="myPager"></ul>
+           </div>
+       </div>
     </div>
 </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+   <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>
+   <script type="text/javascript" src="{{ asset('js/listadoArmas.js') }}"></script>
 {% endblock %}
