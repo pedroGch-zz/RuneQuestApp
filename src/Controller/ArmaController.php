@@ -5,7 +5,8 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
-
+use App\Entity\Arma;
+use Symfony\Component\HttpFoundation\Request;
 
 class ArmaController extends AbstractController
 {
@@ -35,5 +36,31 @@ class ArmaController extends AbstractController
         return $this->render('arma/listadoArmas.html.twig', [
             'controller_name' => 'ArmaController',
         ]);
-    }    
+    } 
+    /**
+     * @Route("/saveArma", name="save_tabla")
+     */
+    public function guardarArma(Request $request){
+        $entity = $this->getDoctrine()->getManager();
+        $arma = new Arma();      
+        $arma->setDes($request->request->get('des'));
+        $arma->setCar($request->request->get('car'));
+        $arma->setFue($request->request->get('fue'));
+        $arma->setMr($request->request->get('mr'));
+        $arma->setPa($request->request->get('pa'));
+        $arma->setBs($request->request->get('danioBase')); 
+        $arma->setDanio($request->request->get('danio'));
+        $arma->setMaterialId($request->request->get('material'));
+        $arma->setCantManos($request->request->get('manos'));
+        $arma->setPrecio($request->request->get('precio'));
+        $entity->persist($arma);
+        $entity->flush();
+        return new Response($this->render('arma/listadoArmas.html.twig', [
+            'controller_name' => 'ArmaController',
+        ]));
+
+
+
+
+    }   
 }

@@ -17,9 +17,9 @@ class Arma
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
-    private $nombre;
+    private $precio;
 
     /**
      * @ORM\Column(type="integer")
@@ -86,14 +86,14 @@ class Arma
         return $this->id;
     }
 
-    public function getNombre(): ?string
+    public function getPrecio(): ?int
     {
-        return $this->nombre;
+        return $this->precio;
     }
 
-    public function setNombre(string $nombre): self
+    public function setPrecio(int $precio): self
     {
-        $this->nombre = $nombre;
+        $this->precio = $precio;
 
         return $this;
     }
