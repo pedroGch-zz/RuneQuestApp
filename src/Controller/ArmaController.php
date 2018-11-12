@@ -32,9 +32,14 @@ class ArmaController extends AbstractController
      * @Route("/listaArma", name="arma_tabla")
      */
     public function arma_tabla()
-    {
+    {  
+        $repository = $this->getDoctrine()->getRepository(Arma::class);
+        $armas= $repository->findAll();
+
+        //dump($armas);die;
         return $this->render('arma/listadoArmas.html.twig', [
             'controller_name' => 'ArmaController',
+            'armas'           =>  $armas
         ]);
     } 
     /**
@@ -58,9 +63,11 @@ class ArmaController extends AbstractController
         return new Response($this->render('arma/listadoArmas.html.twig', [
             'controller_name' => 'ArmaController',
         ]));
-
-
-
-
     }   
+    /**
+     * @Route("/traerTodo", name="get_all_weapon")
+     */
+    public function traerTodo(Request $request){
+        
+    }    
 }

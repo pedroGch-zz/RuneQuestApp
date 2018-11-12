@@ -20,7 +20,10 @@ class Arma
      * @ORM\Column(type="integer")
      */
     private $precio;
-
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $tipo_arma_id;
     /**
      * @ORM\Column(type="integer")
      */
