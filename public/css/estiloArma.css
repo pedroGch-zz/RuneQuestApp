@@ -40,7 +40,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbba00', end
 }
 .rectangulo{
   width: 300px;
-  height: 900px;
+  height: 300px;
 	float:left;
 	margin-left: 50px;
 }

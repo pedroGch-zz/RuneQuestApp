@@ -48,6 +48,7 @@ class ArmaController extends AbstractController
     public function guardarArma(Request $request){
         $entity = $this->getDoctrine()->getManager();
         $arma = new Arma();      
+         $arma->setTipoArmaId($request->request->get('tipo'));
         $arma->setDes($request->request->get('des'));
         $arma->setCar($request->request->get('car'));
         $arma->setFue($request->request->get('fue'));

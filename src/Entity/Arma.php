@@ -17,27 +17,34 @@ class Arma
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
-    private $precio;
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $tipo_arma_id;
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $cant_manos;
+    private $nombre;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
-    private $material_id;
+    private $material;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $danio;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $fue;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $des;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $car;
 
     /**
      * @ORM\Column(type="integer")
@@ -57,17 +64,32 @@ class Arma
     /**
      * @ORM\Column(type="integer")
      */
-    private $fue;
+    private $p_salv;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $car;
+    private $p_rural;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $des;
+    private $p_peq;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $p_gran;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $manos;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $tiempo_fav;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -89,50 +111,74 @@ class Arma
         return $this->id;
     }
 
-    public function getPrecio(): ?int
+    public function getNombre(): ?string
     {
-        return $this->precio;
+        return $this->nombre;
     }
 
-    public function setPrecio(int $precio): self
+    public function setNombre(string $nombre): self
     {
-        $this->precio = $precio;
+        $this->nombre = $nombre;
 
         return $this;
     }
 
-    public function getCantManos(): ?int
+    public function getMaterial(): ?string
     {
-        return $this->cant_manos;
+        return $this->material;
     }
 
-    public function setCantManos(int $cant_manos): self
+    public function setMaterial(string $material): self
     {
-        $this->cant_manos = $cant_manos;
+        $this->material = $material;
 
         return $this;
     }
 
-    public function getMaterialId(): ?int
-    {
-        return $this->material_id;
-    }
-
-    public function setMaterialId(int $material_id): self
-    {
-        $this->material_id = $material_id;
-
-        return $this;
-    }
-
-    public function getDanio(): ?int
+    public function getDanio(): ?string
     {
         return $this->danio;
     }
 
-    public function setDanio(int $danio): self
+    public function setDanio(string $danio): self
     {
         $this->danio = $danio;
+
+        return $this;
+    }
+
+    public function getFue(): ?int
+    {
+        return $this->fue;
+    }
+
+    public function setFue(int $fue): self
+    {
+        $this->fue = $fue;
+
+        return $this;
+    }
+
+    public function getDes(): ?int
+    {
+        return $this->des;
+    }
+
+    public function setDes(int $des): self
+    {
+        $this->des = $des;
+
+        return $this;
+    }
+
+    public function getCar(): ?int
+    {
+        return $this->car;
+    }
+
+    public function setCar(int $car): self
+    {
+        $this->car = $car;
 
         return $this;
     }
@@ -173,38 +219,74 @@ class Arma
         return $this;
     }
 
-    public function getFue(): ?int
+    public function getPSalv(): ?int
     {
-        return $this->fue;
+        return $this->p_salv;
     }
 
-    public function setFue(int $fue): self
+    public function setPSalv(int $p_salv): self
     {
-        $this->fue = $fue;
+        $this->p_salv = $p_salv;
 
         return $this;
     }
 
-    public function getCar(): ?int
+    public function getPRural(): ?int
     {
-        return $this->car;
+        return $this->p_rural;
     }
 
-    public function setCar(int $car): self
+    public function setPRural(int $p_rural): self
     {
-        $this->car = $car;
+        $this->p_rural = $p_rural;
 
         return $this;
     }
 
-    public function getDes(): ?int
+    public function getPPeq(): ?int
     {
-        return $this->des;
+        return $this->p_peq;
     }
 
-    public function setDes(int $des): self
+    public function setPPeq(int $p_peq): self
     {
-        $this->des = $des;
+        $this->p_peq = $p_peq;
+
+        return $this;
+    }
+
+    public function getPGran(): ?int
+    {
+        return $this->p_gran;
+    }
+
+    public function setPGran(int $p_gran): self
+    {
+        $this->p_gran = $p_gran;
+
+        return $this;
+    }
+
+    public function getManos(): ?int
+    {
+        return $this->manos;
+    }
+
+    public function setManos(int $manos): self
+    {
+        $this->manos = $manos;
+
+        return $this;
+    }
+
+    public function getTiempoFav(): ?int
+    {
+        return $this->tiempo_fav;
+    }
+
+    public function setTiempoFav(int $tiempo_fav): self
+    {
+        $this->tiempo_fav = $tiempo_fav;
 
         return $this;
     }
