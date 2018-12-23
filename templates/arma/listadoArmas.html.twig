@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello!{% endblock %}
+{% block title %}Armas!{% endblock %}
 
 {% block body %}
 
@@ -10,8 +10,9 @@
     <table class="highlight" id="armaTabla">
           <thead>
             <tr>
+                <th>ID</th>
+                <th>nombre</th>
                 <th>tipo</th>
-                <th>precio</th>
                 <th>material</th>
                 <th class="center">Vista rapida</th>
                 <th class="center">Modificar</th>
@@ -20,14 +21,32 @@
             </tr>
           </thead>
           <tbody>
+           
             {% for arma in armas %}
-              <tr>
-                <td>{{ arma.precio|e }}</td>
-                <td>{{ arma.car|e }}</td>
-                <td>{{ arma.fue }}</td>
+                <tr>                
+                <td id="id{{ arma.id|e }}">{{ arma.id|e }}</td>
+                <td id="nombre{{ arma.id|e }}">{{ arma.nombre|e }}</td>
+                <td id="tipo{{ arma.id|e }}">{{ arma.tipo|e }}</td>
+                <td id="material{{ arma.id|e }}">{{ arma.material }}</td>
+                <td hidden id="fue{{ arma.id|e }}">{{ arma.fue|e }}</td>
+                <td hidden id="des{{ arma.id|e }}">{{ arma.des|e }}</td>
+                <td hidden id="car{{ arma.id|e }}">{{ arma.car|e }}</td>
+                <td hidden id="bs{{ arma.id|e }}">{{ arma.bs }}</td>
+                <td hidden id="pa{{ arma.id|e }}">{{ arma.pa|e }}</td>
+                <td hidden id="mr{{ arma.id|e }}">{{ arma.mr|e }}</td>
+                <td hidden id="pSalv{{ arma.id|e }}">{{ arma.pSalv|e }}</td>
+                <td hidden id="pRural{{ arma.id|e }}">{{ arma.pRural }}</td>
+                <td hidden id="pPeq{{ arma.id|e }}">{{ arma.pPeq|e }}</td>
+                <td hidden id="pGran{{ arma.id|e }}">{{ arma.pGran|e }}</td>
+                <td hidden id="manos{{ arma.id|e }}">{{ arma.manos|e }}</td>
+                <td hidden id="tiempoFav{{ arma.id|e }}">{{ arma.tiempoFav }}</td>
+                <td hidden id="ef{{ arma.id|e }}">{{ arma.ef|e }}</td>
+                <td hidden id="max{{ arma.id|e }}">{{ arma.max|e }}</td>
+                <td hidden id="tf{{ arma.id|e }}">{{ arma.tf|e }}</td>
+                
                 <td class="center">
                   <a href="#modal1" class=" btn-floating btn-flat blue modal-trigger" title="Ver observaciones">
-                       <i class="material-icons">remove_red_eye</i>
+                       <i class="material-icons" onclick="buscarYMostrarArma('{{ arma.id|e }}')">remove_red_eye</i>
                   </a>
                 </td>
                 <td class="center">
@@ -42,7 +61,7 @@
                 </td>
               </tr>
             {% endfor %}
-          </tbody>
+          </tbody onload = "consoleLog();">
       </table>
       <div class="col-md-12 center text-center">
             <span class="left" id="total_reg"></span>
@@ -54,16 +73,33 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <p id="idArma"></p>
+      <p id="nombreArma"></p>
+      <p id="tipoArma"></p>
+      <p id="materialArma"></p>
+      <p id="fueArma"></p>
+      <p id="desArma"></p>
+      <p id="carArma"></p>
+      <p id="bsArma"></p>
+      <p id="paArma"></p>
+      <p id="mrArma"></p>
+      <p id="pSalvArma"></p>
+      <p id="pRuralArma"></p>
+      <p id="pPeqArma"></p>
+      <p id="pGranArma"></p>
+      <p id="manosArma"></p>
+      <p id="tiempoFavArma"></p>
+      <p id="efArma"></p>
+      <p id="maxArma"></p>
+      <p id="tfArma"></p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Listo</a>
     </div>
   </div>
 {% endblock %}
 {% block javascripts %}
-{{ parent() }}
-   <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>
-   <script type="text/javascript" src="{{ asset('js/listadoArmas.js') }}"></script>
+  {{ parent() }}
+  <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>
+  <script type="text/javascript" src="{{ asset('js/listadoArmas.js') }}"></script>   
 {% endblock %}

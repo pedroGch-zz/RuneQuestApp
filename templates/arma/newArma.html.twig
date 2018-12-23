@@ -7,30 +7,28 @@
 <div class="example-wrapper">
    <div class="container">
     <form action="/saveArma" method="post">
-      <label for="precio">Precio del arma</label>
-      <input type="number" name="precio">
-    <br>
-    <br>
+      <label for="nombre">Nombre del arma</label>
+      <input type="text" name="nombre">
+      <br>
+      <br>
       <label for="tipo">Tipo de arma</label>
-    <select id="tipo" name="tipo">
-      <option value="" disabled selected>De que tipo es el arma?</option>
-      <option value="1">Espada</option>
-      <option value="2">Lanza</option>
-      <option value="3">Cestos</option>
-    </select>
-    <br>
-    <br>
-      <label for="material_frab">Material de fabricación</label>
-    <select id="material_frab" name="material">
-      <option value="" disabled selected>Escoje un matrial</option>
-      <option value="1">Oro</option>
-      <option value="2">Plata</option>
-      <option value="3">Espiritual</option>
-    </select>
-
-
-    <br>
-    <br>
+      <select id="tipo" name="tipo">
+        <option value="" disabled selected>De que tipo es el arma?</option>
+        {% for tipo in tipos %}
+          <option value={{tipo.id}}>{{ tipo.nombreTipo|e }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <br>
+        <label for="material_frab">Material de fabricación</label>
+      <select id="material_frab" name="material">
+        <option value="" disabled selected>Escoje un matrial</option>
+        {% for material in materiales %}
+          <option value={{material.id}}>{{ material.material|e }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <br>
       <span>A cuantas manos?</span>
       <br>
       <br>
@@ -41,39 +39,39 @@
       <label>
           <input name="manos" type="radio" value="2"  />
           <span>2</span>
-        </label>
-        <br>
-        <br>
+      </label>
+      <br>
+      <br>
       <label for="danio">Daño del arma</label>
       <input type="text" name="danio">
       <br>
-        <br>
-      <label for="danioBase">Daño base del arma</label>
-      <input type="text" name="danioBase">
       <br>
-        <br>
-      <label for="pa">Punto de armadura del arma</label>
-      <input type="number" name="pa">
-      <br>
-        <br>
-      <label for="mr">Momento de reacción del arma</label>
-      <input type="number" name="mr">
-      <br>
-        <br>
       <label for="fue">FUE</label>
       <input type="number" name="fue">
       <br>
-        <br>
-      <label for="car">Car del arma</label>
-      <input type="number" name="car">
       <br>
-        <br>
-      <label for="des">Destresa del arma</label>
+      <label for="des">DES</label>
       <input type="number" name="des">
-
+      <br>
+      <br>
+      <label for="car">Car del arma</label>
+      <input type="number" step="0.01" name="car">
+      <br>
+      <br>
+      <label for="danioBase">Probabilidad base del arma</label>
+      <input type="text" name="danioBase">
+      <br>
+      <br>
+      <label for="pa">Punto de armadura del arma</label>
+      <input type="number" name="pa">
+      <br>
+      <br>
+      <label for="mr">Momento de reacción del arma</label>
+      <input type="number" name="mr">
+      
       <span><h4 class="center">Alcances (opcional)</h4></span>
       <br>
-        <br>
+      <br>
       <label for="ef">ef del arma (alcance efectivo)</label>
       <input type="number" name="ef">
       <br>
@@ -85,12 +83,41 @@
       <label for="tf">tf del arma</label>
       <input type="number" name="tf">
       <br>
+      <br>
+      <span><h4 class="center">Precios de las armas</h4></span>
+      <br>
+      <br>
+      <label for="psalv">Precio en tierras salvajes</label>
+      <input type="number" name="psalv">
+      <br>
+      <br>
+      <label for="prural">Precio en medio rural</label>
+      <input type="number" name="prural">
+      <br>
+      <br>
+      <label for="ppque">Precio en ciudades pequeñas/medianas</label>
+      <input type="number" name="ppque">
+      <br>
+      <br>
+      <label for="pgrand">Precio en grandes ciudades/metrópolis</label>
+      <input type="number" name="pgrand">
+      <br>
+      <br>
+      <label for="tfav">Tiempo de fabricación</label>
+      <input type="number" step="0.01" name="tfav">
       <span>
         <input type="submit" value="Crear Arma">
         <input type="button" value="Cancelar">
       </span>
+      
+      
 
     </form>
   <div class="container">
 </div>
 {% endblock %}
+{% block javascripts %}
+  {{ parent() }}
+  <script type="text/javascript" src="{{ asset('js/armas.js') }}"></script>
+{% endblock %}
+

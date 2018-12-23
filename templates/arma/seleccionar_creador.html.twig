@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!
+{% endblock %}
+{% block body %}
+
+<div class="example-wrapper">
+   <div class="container">
+    <form action="/selectTypeCraft" method="post">
+      <label for="objectToCraft">Qué deseas crear?</label>
+      <select id="objectToCraft" name="objectToCraft">
+        <option value="" disabled selected>Escoje un elemento a crear</option>
+        <option value='arma_nueva'>Crear Arma</option>
+      </select>
+      <span>
+        <input type="submit" value="Crear Arma">
+        <input type="button" value="Cancelar">
+      </span>
+    </form>
+   </div> 
+</div>
+{% endblock %}
+{% block javascripts %}
+  {{ parent() }}
+  <script type="text/javascript" src="{{ asset('js/armas.js') }}"></script>
+{% endblock %}
