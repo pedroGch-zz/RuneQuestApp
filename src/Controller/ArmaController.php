@@ -33,9 +33,9 @@ class ArmaController extends AbstractController
         $repository    = $this->getDoctrine()->getRepository(TipoArma::class);
         $TipoArma      = $repository->findAll();
         return $this->render('arma/newArma.html.twig', [
-                             'controller_name' => 'ArmaController',
-                             'tipos'           => $TipoArma,
-                             'materiales'      => $MaterialTipo
+                            'controller_name' => 'ArmaController',
+                            'tipos'           => $TipoArma,
+                            'materiales'      => $MaterialTipo
         ]);
          //return $this->redirectToRoute('arma_tabla');
     } 
