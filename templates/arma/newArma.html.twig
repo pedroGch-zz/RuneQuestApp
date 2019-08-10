@@ -11,34 +11,96 @@
     <form id="example-form">
       <div>
       <h3>Inf Personal</h3>
-      <section>
+    <section>
         <div class="row">
           <div class="input-field col s12">
-            <input placeholder="Event title" id="title" type="text" class="validate">
-            <label for="title">Title</label>
+            <input name="nombre-aventurero" id="nombre-aventurero" type="text" class="validate">
+            <label for="nombre-aventurero">Nombre del aventurero</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <select>
-          <option value="" disabled selected>Choose event type</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-            <label>Event type</label>
+            <select name="especie">
+              <option value="" disabled selected>Tipo de Especie</option>
+              <option value="1">Humano</option>
+              <option value="2">Elfo</option>
+              <option value="3">Trol</option>
+            </select>
+            <label>Especie</label>
           </div>
           <div class="input-field col s6">
-            <select multiple>
-          <option value="" disabled selected>Choose style(s)</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-            <label>Styles</label>
+            <select>
+              <option value="" disabled selected>Tipo de Raza</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Raza</label>
+          </div>  
+          <div class="input-field col s6">
+            <div class="row">
+              <div class="input-field col s6 l6 m6">
+                <input name="edad-aventurero" id="edad-aventurero" type="text" class="validate">
+                <label for="edad-aventurero">Edad del aventurero</label>
+              </div>
+              <div class="input-field col s6 l6 m6" data-cantidad="2" data-dado="6">
+                <a href="#" class=" btn-floating btn-flat green" title="Tirar dados">
+                      <i class="material-icons">autorenew</i>
+                  </a>
+              </div>
+            </div>            
           </div>
-        </div>
-      </section>
+          <div class="input-field col s6" >
+            <div class="row">
+              <div class="input-field col s6 l6 m6">
+                <select>
+                  <option value="" disabled selected>Religión</option>
+                  <option value="1">Religión 1</option>
+                  <option value="2">Religión 2</option>
+                </select>
+                <label>Religión</label>
+              </div>
+              <div class="input-field col s6 l6 m6">
+                <a href="#" class=" btn-floating btn-flat green" title="Tirar dados">
+                  <i class="material-icons">autorenew</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="input-field col s6" >
+              <select>
+                <option value="" disabled selected>Genero</option>
+                <option value="1">Masculino</option>
+                <option value="2">Fenenino</option>
+              </select>
+            <label>Genero</label>
+          </div>
+          <div class="input-field col s12 l6 m6">
+            <input name="procedencia-aventurero" id="procedencia-aventurero" type="text" class="validate">
+            <label for="procedencia-aventurero">Procedencia del aventurero</label>
+          </div>
+          <div class="input-field col s12 l6 m6">
+            <input name="profesion-padres-aventurero" id="profesion-padres-aventurero" type="text" class="validate">
+            <label for="profesion-padres-aventurero">Profesion de los padres</label>
+          </div>
+          <div class="input-field col s6 l6 m6">
+            <input name="altura-aventurero" id="altura-aventurero" type="text" class="validate">
+            <label for="altura-aventurero">Altura del aventurero</label>
+          </div>
+          <div class="input-field col s6 l6 m6">
+            <input name="peso-aventurero" id="peso-aventurero" type="text" class="validate">
+            <label for="peso-aventurero">Peso del aventurero</label>
+          </div>
+          <div class="input-field col s6" >
+            <select>
+              <option value="" disabled selected>Cultura</option>
+              <option value="1">Cultura 1</option>
+              <option value="2">Cultura 2</option>
+            </select>
+            <label>Cultura</label>
+          </div>
+      </div>
+    </section>
       <h3>Profile</h3>
       <section>
         <div class="row">
@@ -88,8 +150,8 @@
 {% endblock %}
 {% block javascripts %}
   {{ parent() }}
-  <script type="text/javascript" src="https://cdn.rawgit.com/rstaib/jquery-steps/master/build/jquery.steps.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script type="text/javascript" src="{{ asset('js/jquery.steps.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/armas.js') }}"></script>
 
 {% endblock %}
