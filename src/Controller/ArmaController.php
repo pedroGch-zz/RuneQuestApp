@@ -107,9 +107,9 @@ class ArmaController extends AbstractController
         return $this->redirectToRoute($craft);
     }    
     /**
-     * @Route("/creartor", name="creartor")
+     * @Route("/creator", name="creator")
      */
-    public function creartor(Request $request){
+    public function creator(Request $request){
         $craft = $request->request; //harcodear este dato arma_nueva
         return $this->render('arma/seleccionar_creador.html.twig', [
             'controller_name' => 'ArmaController',
