@@ -1,5 +1,13 @@
-let edadValor = querySelector("dadosEdad");
-let edadInput = querySelector("edad-aventurero");
+let edadValor = document.querySelector("#dadosEdad");
+let edadInput = document.querySelector("#edad-aventurero");
+
+edadValor.addEventListener("click",putEdadValorInInput(8,8));
+
+function putEdadValorInInput (cantidadDados, numeroCaras){
+    console.log(cantidadDados + ' ' + numeroCaras);
+    //edadInput.value = tirarDados (cantidadDados, numeroCaras);
+}
+
 
 /* 
 necesito crear una funcion que capte el evento click del boton de la edad el aventurero 
