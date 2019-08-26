@@ -4,8 +4,11 @@ let edadValor = document.querySelector("#dadosEdad");
 /*-------------------------- EVENTOS --------------------------*/ 
 edadValor.addEventListener("click",function(e){
     let edadInput = document.querySelector("#edad-aventurero");
-    let cantidadDados = e.target.parentElement.parentElement.dataset.cantidad;
+    let cantidadDados =  getDataSet(e.target.parentElement.parentElement, "cantidad"); //e.target.parentElement.parentElement.dataset.cantidad;
+    console.log(cantidadDados);
+    
     let numeroCaras   = e.target.parentElement.parentElement.dataset.dado;
+    disparador(edadInput);
     edadInput.value   = 15 + tirarDados (cantidadDados, numeroCaras);
 });
 /*------------------ FINDE DE EVENTOS --------------------------*/
