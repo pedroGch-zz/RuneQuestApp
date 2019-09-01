@@ -1,16 +1,21 @@
 let edadValor = document.querySelector("#dadosEdad");
+let edadAventurero = document.querySelector("#edad-aventurero");
 
 
 /*-------------------------- EVENTOS --------------------------*/ 
 edadValor.addEventListener("click",function(e){
-    let edadInput = document.querySelector("#edad-aventurero");
-    let cantidadDados =  getDataSet(e.target.parentElement.parentElement, "cantidad"); //e.target.parentElement.parentElement.dataset.cantidad;
-    console.log(cantidadDados);
     
+    let edadInput = document.querySelector("#edad-aventurero");
+    let cantidadDados = e.target.parentElement.parentElement.dataset.cantidad;
     let numeroCaras   = e.target.parentElement.parentElement.dataset.dado;
     disparador(edadInput);
     edadInput.value   = 15 + tirarDados (cantidadDados, numeroCaras);
 });
+edadAventurero.addEventListener("keypress",function(e){
+    debugger;
+    console.log(validarQueSeaNumero(e));
+});
+
 /*------------------ FINDE DE EVENTOS --------------------------*/
 
 
