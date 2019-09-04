@@ -55,9 +55,63 @@ edadValor.addEventListener("click",function(e){
     eventoDados(e,edadAventurero,15);
 });
 
-edadAventurero.addEventListener("keypress",function(e){
-    debugger;
-    console.log(validarQueSeaNumero(e));
+$("#fue").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#fue").val(),true,event);
+
+});
+
+$("#per").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#per").val(),true,event);
+
+});
+$("#int").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#int").val(),true,event);
+
+});
+$("#con").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#con").val(),true,event);
+
+});
+$("#asp").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#asp").val(),true,event);
+
+});
+$("#tam").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#tam").val(),true,event);
+
+});
+$("#des").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#des").val(),true,event);
+
+});
+
+$("#edad-aventurero").keypress(function(event){
+    if(!validarQueSeaNumero(event)){
+        return false
+    }
+    return validarPrecio($("#edad-aventurero").val(),true,event);
+
 });
 
 /*------------------ FINDE DE EVENTOS --------------------------*/

@@ -41,6 +41,7 @@ function validarPrecio (importeVal,keypress,e){
   if(isNaN(importeVal)){ // Se valida que sea un numero.
     return false;
   }
+  /* habilitar si tiene decimal
     if(importeVal.indexOf('.') != -1){ //Si tiene decimales
       let numAsArray = importeVal.split('.');
       let parteEntera = numAsArray[0];
@@ -60,7 +61,17 @@ function validarPrecio (importeVal,keypress,e){
       else{
         return true;
       }
+  }*/
+  if(importeVal.length > 2){
+    return false;
   }
+  if (importeVal > 18){
+    return false;
+  }
+  else{
+    return true;
+  }
+  
 }
 
 function getDataSet (element, dato){
